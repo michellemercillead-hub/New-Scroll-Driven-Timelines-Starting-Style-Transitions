@@ -67,10 +67,11 @@ body {
 .editorial-header {
 	position: relative;
 	isolation: isolate;
+	width: 100vw;
 	max-width: none;
 	min-height: min(720px, 82vh);
-	margin-left: calc((100% - 100vw) / 2);
-	margin-right: calc((100% - 100vw) / 2);
+	margin-left: calc(50% - 50vw);
+	margin-right: 0;
 	padding: clamp(7rem, 15vw, 11rem) max(1.5rem, calc((100vw - 1100px) / 2)) clamp(5rem, 10vw, 8rem);
 	background:
 		linear-gradient(90deg, rgba(4, 19, 23, 0.98) 0%, rgba(4, 19, 23, 0.9) 39%, rgba(4, 19, 23, 0.24) 100%);
