@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive editorial demonstration of scroll-driven timelines and CSS starting-style transitions.">
+  <meta name="theme-color" content="#08191d">
   <title>Week 07 Lab: Scroll Timelines & Starting Styles</title>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&amp;q=60&amp;fm=webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,6 +16,7 @@
 
   <div class="editorial-container">
     <header class="editorial-header">
+      <img class="editorial-header__image" src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1200&amp;q=60&amp;fm=webp" alt="" aria-hidden="true" fetchpriority="high" decoding="async" width="1200" height="800">
       <span class="editorial-tag">Future of the Web</span>
       <h1 class="editorial-title">The Evolution of Motion Specs</h1>
       <p class="editorial-lead">How native browser engines reclaimed animation performance from heavy script libraries.</p>
@@ -23,7 +27,7 @@
 
       <!-- Scroll-Reveal Image Container -->
       <figure class="reveal-figure">
-        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800" alt="Cyber security network interface" class="reveal-img">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=65&fm=webp" alt="Cyber security network interface" class="reveal-img" loading="lazy" decoding="async" width="900" height="563">
         <figcaption>Hardware-accelerated layouts render smoothly at 120Hz.</figcaption>
       </figure>
 
@@ -34,14 +38,15 @@
         <div class="signup-widget__inner">
           <h2>Subscribe to the Spec</h2>
           <p>Get deep-dives into emerging CSS and browser platform APIs delivered weekly.</p>
-          <div class="signup-fields">
-            <input type="email" placeholder="Enter your email" class="input-field">
-            <button class="btn-submit">Join Feed</button>
-          </div>
+          <form class="signup-fields" action="#" method="post">
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Enter your email" class="input-field" autocomplete="email" required>
+            <button class="btn-submit" type="submit">Join Feed</button>
+          </form>
         </div>
       </section>
 
-      <p>Furthermore, the introduction of declarative transition triggers like `@starting-style` allows developers to define starting properties for elements that are rendering for the first time—making entrance transitions clean, fluid, and entirely script-free.</p>
+      <p>Furthermore, the introduction of declarative transition triggers like <code>@starting-style</code> allows developers to define starting properties for elements that are rendering for the first time—making entrance transitions clean, fluid, and entirely script-free.</p>
     </main>
   </div>
 
